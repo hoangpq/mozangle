@@ -25,5 +25,5 @@ walkdir = "2"
 
 [features]
 # egl = ["gl_generator", "libz-sys"] # Only does anything on Windows
-# build_dlls = ["egl", "libz-sys"]
+build_dlls = ["egl", "libz-sys"]
 dynamic_lib = []
