@@ -23,11 +23,13 @@ fn main() {
     let target = env::var("TARGET").unwrap();
 
     if cfg!(feature = "egl") && !target.contains("windows") {
-        panic!("Do not know how to build EGL support for a non-Windows platform.");
+        // panic!("Do not know how to build EGL support for a non-Windows platform.");
+        return;
     }
 
     if cfg!(feature = "build_dlls") && !target.contains("windows") {
-        panic!("Do not know how to build DLLs for a non-Windows platform.");
+        // panic!("Do not know how to build DLLs for a non-Windows platform.");
+        return;
     }
 
     let mut compiled_libraries: HashSet<Libs> = HashSet::new();
